@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About and Contact | My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>About Me</h1>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About/Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>About Me</h2>
+        <p>I am a college student, mom, and delivery driver. I enjoy learning new skills and working on projects that help me grow.</p>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                <p id="name-error" class="error">Please enter your name.</p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                <p id="email-error" class="error">Please enter a valid email address.</p>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                <p id="message-error" class="error">Please enter a message.</p>
+
+                <button type="submit">Send Message</button>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 My Portfolio</p>
+</footer>
+
+</body>
+</html>
+

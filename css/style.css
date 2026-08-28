@@ -95,3 +95,29 @@ footer {
         margin: 8px;
     }
 }
+
+/* JavaScript menu */
+#nav-menu {
+    display: none;
+}
+
+#nav-menu.show {
+    display: block;
+}
+
+#menu-button {
+    cursor: pointer;
+}
+
+#menu-button:focus,
+#nav-menu a:focus {
+    outline: 3px solid black;
+    outline-offset: 3px;
+}
+
+/* Form errors */
+.error {
+    color: #b00020;
+    font-size: 14px;
+    margin-top: 4px;
+}

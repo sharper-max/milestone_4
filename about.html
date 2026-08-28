@@ -11,7 +11,7 @@
 <header>
     <h1>About Me</h1>
     <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="milestone2.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About/Contact</a>
     </nav>
@@ -26,24 +26,26 @@
     <section>
         <h2>Contact Me</h2>
 
-        <form>
+        <form id="contact-form">
             <fieldset>
                 <legend>Contact Information</legend>
 
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required aria-describedby="name-error">
-                <p id="name-error" class="error">Please enter your name.</p>
+                <p id="name-error" class="error" aria-live="polite"></p>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required aria-describedby="email-error">
-                <p id="email-error" class="error">Please enter a valid email address.</p>
+                <p id="email-error" class="error" aria-live="polite"></p>
 
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
+               <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+              <p id="subject-error" class="error" aria-live="polite"></p>
+
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
-                <p id="message-error" class="error">Please enter a message.</p>
+                <p id="message-error" class="error" aria-live="polite"></p>
 
                 <button type="submit">Send Message</button>
             </fieldset>

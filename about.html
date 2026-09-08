@@ -18,39 +18,81 @@
 </header>
 
 <main>
-    <section>
-        <h2>About Me</h2>
-        <p>I am a college student, mom, and delivery driver. I enjoy learning new skills and working on projects that help me grow.</p>
-    </section>
+    <section class="about-section">
+    <div class="about-content">
 
-    <section>
-        <h2>Contact Me</h2>
+   <p class="intro">Get to Know Me</p>
 
-        <form id="contact-form">
-            <fieldset>
-                <legend>Contact Information</legend>
+    <h2>About Me</h2>
 
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required aria-describedby="name-error">
-                <p id="name-error" class="error" aria-live="polite"></p>
+    <p>
+        I'm a college student who is interested in technology
+        and learning more about web development. I'm currently
+        building my skills in HTML, CSS, and JavaScript through
+        my coursework and personal projects.
+    </p>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required aria-describedby="email-error">
-                <p id="email-error" class="error" aria-live="polite"></p>
+    <p>
+        One of my goals is to become more confident with technology
+        and continue creating websites that are easy to use,
+        organized, and accessible.
+    </p>
 
-                <label for="subject">Subject</label>
-               <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
-              <p id="subject-error" class="error" aria-live="polite"></p>
+    <h3>Outside of School</h3>
+
+    <p>
+        Outside of school, I stay busy with my family, work,
+        and everyday responsibilities. Balancing school with
+        everything else has helped me become more organized
+        and responsible.
+    </p>
+
+    <button id="showMoreBtn" type="button">
+        Show More
+    </button>
+
+    <p id="extraInfo" hidden>
+        I'm continuing to learn by practicing different projects
+        and experimenting with new ways to make websites more
+        useful and accessible.
+    </p>
+
+</div>
+</section>
+
+<section class="goals-section">
+
+<h2>My Goals</h2>
+
+<div class="goal-container">
+
+    <div class="goal-card">
+        <h3>Learn</h3>
+        <p>
+            Continue improving my HTML, CSS, and JavaScript skills.
+        </p>
+    </div>
+
+    <div class="goal-card">
+        <h3>Build</h3>
+        <p>
+            Create more projects that I can add to my portfolio.
+        </p>
+    </div>
+
+    <div class="goal-card">
+        <h3>Grow</h3>
+        <p>
+            Become more confident working with technology
+            and web development.
+        </p>
+    </div>
+
+</div>
+</section>
 
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
-                <p id="message-error" class="error" aria-live="polite"></p>
 
-                <button type="submit">Send Message</button>
-            </fieldset>
-        </form>
-    </section>
 </main>
 
 <footer>

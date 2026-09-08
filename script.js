@@ -101,3 +101,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+// Show More About Me button
+ const showMoreBtn = document.querySelector(”#showMoreBtn”);
+ const extraInfo = document.querySelector(”#extraInfo”);
+if (showMoreBtn && extraInfo) {
+ showMoreBtn.addEventListener(“click”, function () {
+   extraInfo.hidden = !extraInfo.hidden;
+
+    if (extraInfo.hidden) {
+        showMoreBtn.textContent = "Show More";
+    } else {
+        showMoreBtn.textContent = "Show Less";
+    }
+
+});
+}
+

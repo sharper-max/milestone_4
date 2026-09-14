@@ -1,21 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
     // Menu button
     const menuButton = document.querySelector("#menu-button");
     const navMenu = document.querySelector("#nav-menu");
 
-
     if (menuButton && navMenu) {
         menuButton.addEventListener("click", function () {
-            navMenu.classList.toggle("show");
+            const isOpen = navMenu.classList.toggle("show");
 
-
-            if (navMenu.classList.contains("show")) {
-                menuButton.setAttribute("aria-expanded", "true");
-            } else {
-                menuButton.setAttribute("aria-expanded", "false");
-            }
+            menuButton.setAttribute("aria-expanded", isOpen);
         });
     }
 
@@ -23,13 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Contact form validation
     const form = document.querySelector("#contact-form");
 
-
     if (form) {
         const name = document.querySelector("#name");
         const email = document.querySelector("#email");
         const subject = document.querySelector("#subject");
         const message = document.querySelector("#message");
-
 
         const nameError = document.querySelector("#name-error");
         const emailError = document.querySelector("#email-error");
@@ -45,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         email.addEventListener("input", function () {
-            if (email.value.trim() !== "") {
+            if (email.value.includes("@")) {
                 emailError.textContent = "";
             }
         });
@@ -68,6 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             let valid = true;
 
+            nameError.textContent = "";
+            emailError.textContent = "";
+            subjectError.textContent = "";
+            messageError.textContent = "";
+
 
             if (name.value.trim() === "") {
                 nameError.textContent = "Please enter your name.";
@@ -77,6 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (email.value.trim() === "") {
                 emailError.textContent = "Please enter your email.";
+                valid = false;
+            } else if (!email.value.includes("@")) {
+                emailError.textContent = "Please enter a valid email.";
                 valid = false;
             }
 
@@ -100,20 +99,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-});
-// Show More About Me button
- const showMoreBtn = document.querySelector(”#showMoreBtn”);
- const extraInfo = document.querySelector(”#extraInfo”);
-if (showMoreBtn && extraInfo) {
- showMoreBtn.addEventListener(“click”, function () {
-   extraInfo.hidden = !extraInfo.hidden;
+    // Show More About Me button
+    const showMoreBtn = document.querySelector("#showMoreBtn");
+    const extraInfo = document.querySelector("#extraInfo");
 
-    if (extraInfo.hidden) {
-        showMoreBtn.textContent = "Show More";
-    } else {
-        showMoreBtn.textContent = "Show Less";
+    if (showMoreBtn && extraInfo) {
+        showMoreBtn.addEventListener("click", function () {
+            extraInfo.hidden = !extraInfo.hidden;
+
+            if (extraInfo.hidden) {
+                showMoreBtn.textContent = "Show More";
+            } else {
+                showMoreBtn.textContent = "Show Less";
+            }
+        });
     }
 
 });
-}
-
